@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Cookies from "js-cookie";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -11,6 +12,13 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState("");
   const router = useRouter();
+
+    useEffect(() =>{
+    const token = Cookies.get("token");
+    if(token){
+      router.push("/dashboard");
+    }
+  },[router]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

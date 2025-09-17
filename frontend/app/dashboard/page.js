@@ -33,7 +33,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 to-pink-500 font-poppins px-4">
       <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md text-center space-y-6">
-        <h1 className="text-3xl font-bold text-gray-800">📊 Dashboard</h1>
+        <h1 className="text-3xl font-bold text-gray-800">Dashboard</h1>
 
         {user ? (
           <>
